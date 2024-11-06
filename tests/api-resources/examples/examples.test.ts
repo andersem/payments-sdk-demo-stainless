@@ -1,0 +1,45 @@
+// File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
+
+import SpecPayments from 'spec-payments-stainless-demo';
+import { Response } from 'node-fetch';
+
+const client = new SpecPayments({
+  accessToken: 'My Access Token',
+  apiKey: 'My API Key',
+  adminKey: 'My Admin Key',
+  clientId: 'My Client ID',
+  clientSecret: 'My Client Secret',
+  baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
+});
+
+describe('resource examples', () => {
+  test('discountCodeCallbackURL: only required params', async () => {
+    const responsePromise = client.examples.discountCodeCallbackURL({
+      configuration: {},
+      order: { merchant_reference: 'merchant_reference' },
+      url: { return_url: 'https://example.com/accept' },
+    });
+    const rawResponse = await responsePromise.asResponse();
+    expect(rawResponse).toBeInstanceOf(Response);
+    const response = await responsePromise;
+    expect(response).not.toBeInstanceOf(Response);
+    const dataAndResponse = await responsePromise.withResponse();
+    expect(dataAndResponse.data).toBe(response);
+    expect(dataAndResponse.response).toBe(rawResponse);
+  });
+
+  test('shippingAddressCallbackURL: only required params', async () => {
+    const responsePromise = client.examples.shippingAddressCallbackURL({
+      configuration: {},
+      order: { merchant_reference: 'merchant_reference' },
+      url: { return_url: 'https://example.com/accept' },
+    });
+    const rawResponse = await responsePromise.asResponse();
+    expect(rawResponse).toBeInstanceOf(Response);
+    const response = await responsePromise;
+    expect(response).not.toBeInstanceOf(Response);
+    const dataAndResponse = await responsePromise.withResponse();
+    expect(dataAndResponse.data).toBe(response);
+    expect(dataAndResponse.response).toBe(rawResponse);
+  });
+});
