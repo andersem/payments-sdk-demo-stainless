@@ -310,25 +310,6 @@ export class SpecPayments extends Core.APIClient {
   static fileFromPath = Uploads.fileFromPath;
 }
 
-export {
-  SpecPaymentsError,
-  APIError,
-  APIConnectionError,
-  APIConnectionTimeoutError,
-  APIUserAbortError,
-  NotFoundError,
-  ConflictError,
-  RateLimitError,
-  BadRequestError,
-  AuthenticationError,
-  InternalServerError,
-  PermissionDeniedError,
-  UnprocessableEntityError,
-} from './error';
-
-export import toFile = Uploads.toFile;
-export import fileFromPath = Uploads.fileFromPath;
-
 SpecPayments.SessionsProfiles = SessionsProfiles;
 SpecPayments.Sessions = Sessions;
 SpecPayments.Transactions = Transactions;
@@ -336,7 +317,6 @@ SpecPayments.Accounts = Accounts;
 SpecPayments.Branding = Branding;
 SpecPayments.Examples = Examples;
 SpecPayments.V2 = V2;
-
 export declare namespace SpecPayments {
   export type RequestOptions = Core.RequestOptions;
 
@@ -395,5 +375,22 @@ export declare namespace SpecPayments {
 
   export { V2 as V2 };
 }
+
+export { toFile, fileFromPath } from 'spec-payments-stainless-demo/uploads';
+export {
+  SpecPaymentsError,
+  APIError,
+  APIConnectionError,
+  APIConnectionTimeoutError,
+  APIUserAbortError,
+  NotFoundError,
+  ConflictError,
+  RateLimitError,
+  BadRequestError,
+  AuthenticationError,
+  InternalServerError,
+  PermissionDeniedError,
+  UnprocessableEntityError,
+} from 'spec-payments-stainless-demo/error';
 
 export default SpecPayments;
