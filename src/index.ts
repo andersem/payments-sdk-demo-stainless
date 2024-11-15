@@ -376,7 +376,7 @@ export declare namespace SpecPayments {
   export { V2 as V2 };
 }
 
-export { toFile, fileFromPath } from 'spec-payments-stainless-demo/uploads';
+export { toFile, fileFromPath } from './uploads';
 export {
   SpecPaymentsError,
   APIError,
@@ -391,6 +391,6 @@ export {
   InternalServerError,
   PermissionDeniedError,
   UnprocessableEntityError,
-} from 'spec-payments-stainless-demo/error';
+} from './error';
 
 export default SpecPayments;
