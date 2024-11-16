@@ -1,6 +1,6 @@
 {
   "name": "spec-payments-stainless-demo",
-  "version": "0.0.1-alpha.0",
+  "version": "0.0.1-alpha.1",
   "description": "The official TypeScript library for the Spec Payments API",
   "author": "Spec Payments <integration@dintero.com>",
   "types": "dist/index.d.ts",
